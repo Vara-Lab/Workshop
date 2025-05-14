@@ -1,30 +1,22 @@
-#![no_std]
 
-// Add your program code
+#![no_std]
+#![allow(clippy::new_without_default)]
 
 use sails_rs::prelude::*;
-
 pub mod services;
+use services::extended_service::ExtendedService;
 
-// Import service to be used for the program
-use services::service::Service;
-
-pub struct Program;
+pub struct Program(());
 
 #[program]
 impl Program {
-    // Application constructor (it is an associated function)
-    // It can be called once per application lifetime.
-    pub fn new() -> Self {
-        // Init the state
-        Service::seed();
-
-        Self
+    pub fn new(name: String, symbol: String, decimals: u8) -> Self {
+        ExtendedService::seed(name, symbol, decimals);
+        Self(())
     }
 
-    
-    #[route("Service")]
-    pub fn service_svc(&self) -> Service {
-        Service::new()
+    #[route("Vft")]
+    pub fn vft(&self) -> ExtendedService {
+        ExtendedService::new()
     }
 }

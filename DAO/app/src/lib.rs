@@ -1,30 +1,23 @@
+
 #![no_std]
 
-// Add your program code
-
 use sails_rs::prelude::*;
-
 pub mod services;
-
-// Import service to be used for the program
 use services::service::Service;
 
 pub struct Program;
 
 #[program]
 impl Program {
-    // Application constructor (it is an associated function)
-    // It can be called once per application lifetime.
-    pub fn new() -> Self {
-        // Init the state
-        Service::seed();
-
+    /// Constructor for the Voting Program.
+    /// Must be called once at deployment, passing the admin and available options.
+    pub fn new(admin: ActorId, options: Vec<String>) -> Self {
+        Service::seed(admin, options);
         Self
     }
 
-    
     #[route("Service")]
-    pub fn service_svc(&self) -> Service {
+    pub fn service(&self) -> Service {
         Service::new()
     }
 }
