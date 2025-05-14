@@ -16,9 +16,6 @@ session-service = { git = "https://github.com/gear-foundation/signless-gasless-s
 extended-vft-client = { git = "https://github.com/gear-foundation/standards/"}
 extended-vnft-client = { git = "https://github.com/gear-foundation/standards/"}
 extended-vmt-client = { git = "https://github.com/gear-foundation/standards/"}
-extended-vmt = { git = "https://github.com/gear-foundation/standards/"}
-extended-vft = { git = "https://github.com/gear-foundation/standards/"}
-extended-vnft = { git = "https://github.com/gear-foundation/standards/"}
 vft-service = { git = "https://github.com/gear-foundation/standards/"}
 vmt-service = { git = "https://github.com/gear-foundation/standards/"}
 vnft-service = { git = "https://github.com/gear-foundation/standards/"}

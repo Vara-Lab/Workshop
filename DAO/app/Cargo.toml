@@ -11,12 +11,11 @@ session-service.workspace = true
 extended-vft-client.workspace = true
 extended-vnft-client.workspace = true
 extended-vmt-client.workspace = true
-extended-vmt.workspace = true
-extended-vft.workspace = true
-extended-vnft.workspace = true
 vft-service.workspace = true
 vmt-service.workspace = true
 vnft-service.workspace = true
 keyring-service.workspace = true
+
+
 
 
