@@ -4,7 +4,7 @@
 
 use sails_rs::prelude::*;
 pub mod services;
-use services::extended_service::ExtendedService;
+use services::service::ExtendedService;
 
 pub struct Program(());
 
